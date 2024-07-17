@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diarios de</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 20px;
+        padding: 20px;
+    }
+    .lista {
+        font-size: 18px;
+        list-style-type: none;
+        counter-reset: section;
+    }
+    .lista > li {
+        counter-increment: section;
+        margin-bottom: 10px;
+    }
+    .lista > li:before {
+        content: counter(section) ". ";
+        font-weight: bold;
+    }
+    .lista > li > ul {
+        list-style-type: lower-alpha;
+        margin-top: 0;
+    }
+    .lista > li > ul > li {
+        margin-bottom: 5px;
+    }
+    .lista > li > ol {
+        list-style-type: upper-roman;
+        margin-top: 0;
+    }
+    .lista > li > ol > li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <h1>Diarios de:</h1>
+    <ol class="lista">
+        <li>ESPAÃ‘A...
+            <ul>
+                <li>El Mundo</li>
+                <li>El PaÃ­s</li>
+                <li>La Vanguardia</li>
+            </ul>
+        </li>
+        <li>EE.UU.
+            <ol>
+                <li>New York Times</li>
+                <li>The Washington Post</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
+

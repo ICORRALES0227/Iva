@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<!https://lenguajecss.com/css/fuentes-y-tipografias/tipografias/
+    https://www.mclibre.org/consultar/htmlcss/css/css-fuente.html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión</title>
+<style>
+    body {
+        font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+        font-style:italic; 
+        /*background-color: #f4f4f4;*/
+        background-image: url('fondo prin1.jpg');
+        background-size: cover; /* Ajustar al tamaño de la ventana */
+        background-repeat: no-repeat; /* No repetir la imagen */
+        
+    }
+    .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+       background: #fff;
+        /*background-color: hsl(120, 100%, 50%); /* Verde */
+        background-image: linear-gradient(to bottom, #ff0000, #00ff00); /* Degradado de rojo a verde */
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Nombre de usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        
+        // Obtener los valores del formulario
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // Validar las credenciales (puedes implementar una lógica más robusta aquí)
+        if(username === "IVA" && password === "123"){
+            // Credenciales válidas, redirigir a la página de información
+            window.location.href = "Pagina_principal.html";
+        } else {
+            // Credenciales inválidas, mostrar mensaje de error
+            alert("Usuario o contraseña incorrectos");
+        }
+    });
+</script>
+
+</body>
+</html>
